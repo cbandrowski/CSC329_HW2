@@ -94,7 +94,6 @@ public class Player {
      * Equals
      * compares names of players
      */
-
     public boolean playerEquals(Player other) {
         return this.name.equals(other.name);
     }

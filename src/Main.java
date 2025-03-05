@@ -4,8 +4,11 @@ import java.io.FileReader;
 import java.io.IOException;
 import java.sql.SQLOutput;
 
-//TIP To <b>Run</b> code, press <shortcut actionId="Run"/> or
-// click the <icon src="AllIcons.Actions.Execute"/> icon in the gutter.
+/**
+ * Main
+ * This will display all methods from Priority Queue using PQHeap and HeapSort from Main
+ * @author Cody Bandrowski
+ */
 public class Main {
     public static void main(String[] args) {
         PQHeap pqHeap = new PQHeap();
@@ -57,6 +60,12 @@ public class Main {
         }
 
     }
+
+    /**
+     * heapsort method
+     * this will sort the list in order of highest to lowest
+     * @param pa
+     */
     public static void heapsort(Player[] pa){
         PQHeap pqHeap = new PQHeap();
         for(Player p : pa){
