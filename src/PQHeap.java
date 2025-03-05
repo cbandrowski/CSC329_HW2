@@ -87,7 +87,7 @@ public class PQHeap implements PriorityQueue{
     @Override
     public void clear() {
         size = 0;
-            heap = new Player[10];
+        heap = new Player[10];
 
     }
 

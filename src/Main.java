@@ -49,6 +49,12 @@ public class Main {
         System.out.println("Create Clone -----------------------------------------------------------------");
          System.out.println(pqHeap3.toString());
 
+         //Clear and is empty
+        System.out.println("PQHeap clear and is Empty --------------------------------------------------------------");
+        pqHeap3.clear();
+        System.out.println(pqHeap3.isEmpty());
+        System.out.println(pqHeap3.toString());
+
         //Display and remove players in order of highest score
         System.out.println("Highest Score player: "+ pqHeap.getHighestScoreplayer());
 
