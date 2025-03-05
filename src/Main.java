@@ -41,26 +41,27 @@ public class Main {
 
         //Copy Constructor
         PQHeap pqHeap2 = new PQHeap(pqHeap);
-        System.out.println("Copy Constructor --------------------------------------------------------------");
+        System.out.println("Copy Constructor --------------------------------------------------------------------------------------------");
         System.out.println(pqHeap2.toString());
 
         //CreatClone
          PQHeap pqHeap3 = pqHeap.createClone();
-        System.out.println("Create Clone -----------------------------------------------------------------");
+        System.out.println("Create Clone -----------------------------------------------------------------------------------------------");
          System.out.println(pqHeap3.toString());
 
          //Clear and is empty
-        System.out.println("PQHeap clear and is Empty --------------------------------------------------------------");
+        System.out.println("PQHeap clear and is Empty -----------------------------------------------------------------------------------");
         pqHeap3.clear();
         System.out.println(pqHeap3.isEmpty());
         System.out.println(pqHeap3.toString());
 
         //Display and remove players in order of highest score
-        System.out.println("Highest Score player: "+ pqHeap.getHighestScoreplayer());
+        System.out.println("Highest Player ----------------------------------------------------------------------------------------------");
+        System.out.println("Highest Score player: "+ pqHeap.getHighestScoreplayer()+"\n");
 
         //HeapSort
         heapsort(players);
-        System.out.println("Sorted players in HeapSort ------------------------------------------------");
+        System.out.println("Sorted players in HeapSort -----------------------------------------------------------------------------------");
         for (Player p : players) {
             System.out.println(p.toString());
         }
