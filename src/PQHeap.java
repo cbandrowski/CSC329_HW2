@@ -57,7 +57,7 @@ public class PQHeap implements PriorityQueue{
             heap = temp;
         }
         heap[size] = a;
-        heapifyUp(size);
+        heapifyUp(size -1);
         size++;
     }
 
@@ -129,16 +129,18 @@ public class PQHeap implements PriorityQueue{
      * @param index of newly added element
      */
     private void heapifyUp(int index){
-        int parentIndex = (index-1)/2;
-        while(index > 0 && heap[parentIndex].getScore() > heap[index].getScore()){
+        while(index > 0 ){
+            int parentIndex = (index-1)/2;
+            if(heap[index].getScore() <= heap[parentIndex].getScore()){
+                break;
+            }
             swap(index, parentIndex);
             index = parentIndex;
-            parentIndex = (index-1)/2;
         }
     }
 
     /**
-     * Heapidy down operation to maintain heap property after removal
+     * Heapify down operation to maintain heap property after removal
      * @param index to heapify down
      */
     private void heapifyDown(int index){
@@ -155,5 +157,23 @@ public class PQHeap implements PriorityQueue{
             swap(index, largest);
             heapifyDown(largest);
         }
+    }
+
+    /**
+     * toString
+     * To show whole heap as string
+     * @return
+     */
+    @Override
+    public String toString(){
+        StringBuilder sb = new StringBuilder("PQHeap; ");
+        for(int i = 0; i<size; i++){
+            sb.append(heap[i].toString());
+            if(i != size-1){
+                sb.append("\n ");
+            }
+        }
+        sb.append("\n");
+        return sb.toString();
     }
 }
